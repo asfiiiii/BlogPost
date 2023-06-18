@@ -1,0 +1,158 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.title
+{
+    background-color: rgba(245, 245, 255, 0.7);
+    width: 500px;
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 3px;
+    text-transform:capitalize;
+}
+.info
+{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 10px 20px;
+    color: grey;
+}
+.imig{
+    max-width: 600px;
+    height: 350px;
+    padding: 10px;
+    border: 1px solid rgb(245, 241, 241);
+    margin-bottom: 20px;
+}
+.para
+{
+    width: 1200px;
+    font-size: 1.3rem;
+    color: rgb(105, 105, 105);
+    min-height:200px;
+    background-color: rgba(245, 245, 255, 0.7); 
+    padding: 10px 30px;
+    margin-bottom: 20px;
+}
+.buttons
+{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.heh
+{
+    display: flex;
+    
+}
+.heh button
+{
+    color: black;
+    background-color: rgb(255, 142, 105);
+    padding: 10px 20px;
+    margin: 5px 5px;
+    font-size: 1.3rem;
+    font-family: serif;
+    font-weight: 600;
+    border: transparent;
+    border-radius: 5px;
+
+}
+.buttons a{
+    color: black;
+    background-color: rgb(219, 234, 248);
+    padding: 10px 20px;
+    margin: 5px 5px;
+    font-size: 1.3rem;
+    font-family: serif;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.buttons .hehh{
+    background-color: rgb(156, 243, 156);
+}
+
+ .admin
+{
+    font-size: 0.8rem;
+    color: rgb(104, 104, 227);
+    margin-bottom: 15px;
+    margin-left: 10px;
+    background-color: rgb(208, 236, 247);
+    padding: 1px 6.5px;
+    border-radius: 3px;
+}
+
+
+@media  screen and (min-width:355px) and (max-width:420px) {
+
+    
+    .title,.info
+    {
+        width: 350px;
+ 
+    }
+
+    .imig{
+        max-width: 380px;
+        height: 250px;
+        padding: 10px;
+        border: 1px solid rgb(245, 241, 241);
+        margin-bottom: 20px;
+    }
+
+    .para
+{
+    width: 90%;
+    font-size: 1.07rem;
+    color: rgb(105, 105, 105);
+    min-height:200px;
+    background-color: rgba(245, 245, 255, 0.7); 
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    hyphens: auto;
+}
+
+.buttons
+{
+    width: 90%;
+    flex-direction: column;
+}
+
+.heh button
+{
+
+    padding: 5px 10px;
+    margin: 15px 10px;
+    font-size: 0.9rem;
+
+}
+.buttons a{
+   
+    padding: 5px 10px;
+    margin: 15px 10px;
+    font-size: 0.9rem;
+   
+}
+
+.buttons .social{
+
+    margin-top: 10px;
+
+
+}
+.buttons .social i{
+
+    margin: 10px 5px;
+}
+
+}

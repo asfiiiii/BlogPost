@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <title>Update Blog</title>
+    <link rel="stylesheet" href="/css/crud.css">
+</head>
+<body>
+
+    <div class="back">
+       <a href="/home"> <i class="uil uil-arrow-left"></i></a>
+    </div>
+    <div>
+        <div class="intro">
+            <h2>
+                Blogging is the art of turning thoughts into words, and words into magic
+            </h2>
+            <div>
+                <img src="/images/quil.png" alt="">                
+                <img src="/images/pen.png" alt="">   
+            </div>       
+        </div>
+        <h1 class="text-center mt-5">Update Blog</h1>
+        <div class="full col-md-6 offset-md-3">
+            <form action="/home/<%= blog._id %>?_method=put" method="POST" novalidate class="require-validation">
+                <div class="mb-3">
+                    <label class="title form-label" for="title">Title:</label>
+                    <input class="form-control" type="text" id="title" name="title" value="<%= blog.title %>" required maxlength="14">
+                    <div id="title-counter" class="text-muted">Remaining Words: 14</div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a title (up to 14 words).
+                    </div>
+                </div>
+    
+                <div class="mb-3">
+                    <label class="desc form-label" for="description">Description:</label>
+                    <textarea class="form-control" type="text" id="description" name="description" required><%= blog.description %></textarea>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a description!
+                    </div>
+                </div>
+    
+                <div class="mb-3">
+                    <button class="btn button btn-danger" type="submit">Update!</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        const form = document.querySelector('.require-validation');
+        const titleInput = document.getElementById('title');
+        const counter = document.getElementById('title-counter');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (form.checkValidity()) {
+                // Valid form, submit it
+                form.submit();
+            } else {
+                // Invalid form, show validation feedback
+                form.classList.add('was-validated');
+            }
+        });
+    
+        titleInput.addEventListener('input', function() {
+            const remainingCharacters = 14 - this.value.length;
+            counter.textContent = 'Remaining Words: ' + remainingCharacters;
+        });
+    </script>
+</body>
+</html>

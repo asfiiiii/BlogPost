@@ -1,0 +1,29 @@
+
+<nav>
+
+    <div class="logo">
+       
+       <img src="/images/logo.png" alt="">
+</div>
+
+<div class="links">
+
+    <div class="btn"> 
+        <button class="menu " id="menu" href=""><i class="uil active uil-bars"></i></button>
+        <button class="menu1 " id="menu1" href=""><i class="uil active uil-times"></i></button>
+    </div>
+    <div class="link ">
+        <a href="/home">Home</a>
+        <a href="">API</a>
+        <a href="">About</a>
+        <% if(!loggedUser){ %>
+        <a class="ath" href="/login">Login</a>
+        <a class="ath" href="/register">Sign up</a>
+        <% } %>
+        <% if(loggedUser){ %>
+        <a class="ath" href="/logout">Sign out</a>
+        <% } %>
+    </div>
+
+</div>
+</nav>

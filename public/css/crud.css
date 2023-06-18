@@ -1,0 +1,120 @@
+.back 
+{
+display: block;
+margin: 10px 12px;
+}
+
+.back a i
+{
+font-size: 2.5rem;
+color: black;
+
+}
+
+
+.intro
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5px;
+}
+.intro h2
+{
+    font-size:1.5rem ;
+    display:flex;
+   
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.intro img
+{
+    width: 40px;
+    display: inline;
+}
+
+.title
+{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(64, 64, 64);
+
+}
+
+.desc
+{
+    font-size: 1.3rem;
+    color: rgb(64, 64, 64);
+
+    font-weight: 600;
+}
+.im
+{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-color: rgb(170, 170, 170);
+    color: rgb(64, 64, 64);
+    margin-left: 43%;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+@media  screen and (min-width:355px) and (max-width:420px) {
+
+    .back 
+    {
+    display: block;
+    margin: 10px 12px;
+    }
+    
+    .back a i
+{
+font-size: 2.5rem;
+color: black;
+
+}
+    .intro
+{
+    margin-top: 10px;
+}
+
+    .intro h2
+{
+    font-size:1.3rem;
+    display:flex;
+    text-align: center;
+   justify-content: center;
+   align-items: center;
+   margin: 10px 15px;
+    font-weight: 500;    
+}
+
+    .full{
+        margin: 15px 20px;
+    }
+    
+    .button
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-color: rgb(170, 170, 170);
+    color: rgb(64, 64, 64);
+    margin-left: 33%;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+}

@@ -1,0 +1,280 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main
+{
+    margin-bottom: 30px;
+}
+.cover
+{
+    max-width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -100;
+}
+
+
+main .starter
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 630px;
+}
+.guidlines
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.guidlines h2
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+}
+.guidlines p {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.4rem;
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    text-align: center;
+}
+
+.guidlines button {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+    font-size: 1.4rem;
+    padding: 3px 10px;
+    border-color: transparent;
+    color: white;
+    margin-top: 20px;
+    width: 200px
+}
+
+.guidlines button a{
+    color: white;
+}
+
+
+main .intro
+{
+    backdrop-filter: blur(2.5px); /* Adjust the blur radius as needed */
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust the transparency level as needed */
+    color: rgb(0, 0, 0); /* Optional: Set text color for better visibility */
+    max-width: 500px;
+    min-height: 540px;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    margin-top: 20px;
+}
+
+.intro .icons img
+{
+    width: 30px;
+    padding-bottom: 15px;
+}
+.intro h2
+{
+    margin:0px 30px;
+    padding-bottom: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 1px solid rgb(193, 191, 191);
+    font-size: 1.69rem;
+}
+.intro h3
+{
+    margin-left: 30px;
+    font-family:cursive;
+    font-size: 1.1rem;
+    padding: 20px 0px;
+}
+
+.intro p
+{
+    border-bottom: 1px solid rgb(183, 183, 183);
+    padding-bottom: 10px;
+}
+
+.carousel-inner img
+{
+    margin-top: 10px;
+    max-width: 390px;
+    height: 200px;
+}
+
+.blogs h2{
+    margin-top: 4%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.cards
+{
+    display: flex;
+    align-items:center;
+    justify-content: start;
+    flex-wrap:wrap;
+    margin: 5px 80px;
+    margin-bottom: 100px;
+}
+.cards .card
+{
+    margin: 15px 20px;
+   
+}
+.card .admin
+{
+    font-size: 0.8rem;
+    margin: 0px 5px;
+    color: rgb(104, 104, 227);
+    background-color: rgb(208, 236, 247);
+    padding: 2px 5px;
+}
+.card .imig
+{
+  max-width: 300px;
+  max-height: 160px;
+}
+.adj
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-title {
+    display: inline;
+    font-family:serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  
+  .time {
+    display:inline;
+    font-size: 0.7rem;
+    color: grey;
+  }
+  
+  .card-text
+  {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    height: 60px;
+
+  }
+
+  .card .btn
+  {
+   margin-left: 71px; 
+   background-color:aliceblue;
+   color: black;
+   font-size: 1.1rem;
+   border-color: rgb(223, 223, 223);
+   width: 100px;
+  }
+
+  .card .social
+  {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .blogs h2
+  {
+    font-family: serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  .author
+  {
+    font-size:0.9rem;
+    font-family: serif;
+  }
+
+  .card .social i{
+    margin: 0px 7px;
+  }
+
+  .borderr
+  {
+    border-bottom: 1px solid #eeeded;
+    margin: 15px 10px;
+  }
+
+  
+  
+@media  screen and (min-width:355px) and (max-width:420px) {
+
+    .cover
+{
+    max-width: 100%;
+    height: 65vh;
+    position: absolute;
+    z-index: -100;
+}
+    main .starter
+    {
+        flex-direction: column;
+    }
+    .guidlines
+    {
+        height: 400px;
+    }
+    .guidlines p {
+        background-color: rgba(255, 255, 255, 0.4);
+        font-size: 1.4rem;
+        width: 280px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-weight: 600;
+        text-align: center;
+    }
+    
+main .intro
+{
+    margin-top: 10px;
+    margin-left: 0%;
+}
+.intro h2
+{
+    text-align: center;
+}
+.intro h3
+{
+    text-align: center;
+}
+.blogs h2
+{
+    margin-top: 7.5%;
+
+}
+.cards
+{
+    margin: 10px 10px;
+    justify-content: center;
+}
+
+.card .btn
+{
+    margin-left: 60px;
+}
+
+.card-text{
+    height: 90px;
+}
+
+
+}

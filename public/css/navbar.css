@@ -1,0 +1,145 @@
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 24px;
+}
+nav .logo 
+{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+nav .logo img
+{
+    width: 35px;
+}
+nav .menu
+{
+    font-size: 1.5rem;
+    border: none;
+    background-color: inherit;
+    z-index: 9999;
+    display: none;
+
+}
+nav .menu1
+{
+    font-size: 1.5rem;
+    border: none;
+    background-color: inherit;
+    display: none;
+    z-index: 9999;
+    
+}
+nav .links
+{
+    display: flex;
+    
+}
+
+nav .links a
+{
+    padding: 7px 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 1.24rem;
+}
+
+nav .links .ath
+{
+    background-color: rgba(188, 188, 188, 0.4); /* Adjust the transparency level as needed */
+    border-radius: 20px;
+}
+
+
+nav .links div 
+{
+    padding-left: 10px;
+    
+}
+nav .links div i
+{
+    font-size: 1.65rem;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media  screen and (min-width:355px) and (max-width:420px) {
+   
+    
+    nav .logo img
+    {
+        margin-left: 3px;
+    }
+    nav .menu
+    {
+        z-index: 100;
+        display: block;
+
+    }
+    nav .active
+    {
+        z-index: 1000;
+    }
+    nav .active .menu
+    {
+        z-index: 100;
+        display: none;
+    }
+    nav .menu1
+    {
+        z-index: 100;
+        display: none;
+
+    }
+    nav .active .menu1
+    {
+        z-index: 100;
+        display: block;
+    }
+    nav .links .link 
+    {
+        backdrop-filter: blur(3.5px); /* Adjust the blur radius as needed */
+        background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency level as needed */
+        color: white; /* Optional: Set text color for better visibility */
+        padding: 20px;
+      position: absolute;
+       right: 0;
+       top: 0;
+       width: 65%;
+        height: 100vh;        
+        z-index: 10;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 70px;
+        transition: all 0.3s linear;
+        transform: translateX(100%);
+       
+    }
+    nav .links .active
+    {
+        transform: translateX(0%);
+    }
+    nav .links .link a
+    {   
+   font-size: 1.4rem;
+    margin-top: 20px;
+   
+    
+    }
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="/css/show.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+
+      <%- include("../views/partials/flash.ejs")  %> 
+
+    <%- include('../views/partials/navbar.ejs') %>
+
+    <main>
+
+        <h1 class="title">
+            <%= blog.title %>
+        </h1>
+        <div class="info">
+            <% if(blog.author.username === 'asfar' || blog.author.username ==='Asfar' ) { %>
+
+                <div style="display: flex;">
+                    <p style="text-transform: capitalize;">~ <%= blog.author.username %></p>
+                    <span class="admin">Admin</span>
+    
+                </div>
+               
+            <% } else { %>
+
+                <p style="text-transform: capitalize;">~ <%= blog.author.username %></p>
+
+                <% } %>
+            <span><i class="uil uil-clock-eight"></i><%= blog.time %></span>
+        </div>
+        <% for(let img of blog.image){ %>
+            <img src="<%= img.path %>" class="card-img-top imig" alt="...">
+            <% } %>
+        <p style="white-space: pre-line;" class="para"><%= blog.description %></p>
+
+        <div class="buttons">
+            <div class="heh">
+                <% if(loggedUser && blog.author.equals(loggedUser._id)){ %>
+                <a class="hehh" href="/home/<%=blog._id%>/edit">Update Blog</a>
+                <form action="/home/<%= blog._id %>?_method=Delete" method="post" >
+                    <button>Delete blog</button>
+                </form>
+                <% } %>
+                <a href="/home">Go Back</a>
+            </div>
+            <div class="social">
+                <i class="uil uil-facebook-f"></i>
+                <i class="uil uil-linkedin"></i>
+                <i class="uil uil-github"></i>
+                <i class="uil uil-twitter"></i>
+                
+              </div>
+        </div>
+    </main>
+ 
+    <script src="/js/navbar.js"></script>
+
+</body>
+</html>
